@@ -1,13 +1,67 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { StyleSheet } from 'react-native';
+import { MyLogin } from './app/views/MyLogin.js';
+import { Register} from './app/views/Register.js';
+import { Lesson } from './app/views/Lesson.js';
+import { LessonDetail } from './app/views/LessonDetail.js';
+
+// const yourStackNavigator = createStackNavigator({
+//   SomeRoute: SomeScreen,
+//   SpecificRoute: {
+//     screen: SpecificScreen,
+//     navigationOptions: ({ navigation }) => ({
+//         headerLeft: (<HeaderBackButton onPress={_ => navigation.navigate("Somewhere")}/>)
+//     })
+//   },
+// });
+const Stack = createStackNavigator();
+
+function NavStack() {
+  return (
+     <Stack.Navigator
+        screenOptions={{
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#fb5b5a',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle :{
+            fontWeight: 'bold',
+          },
+        }}
+      >
+      <Stack.Screen 
+        name="Login" 
+        component={MyLogin} 
+        options={{ title: 'Login' }}
+      />
+      <Stack.Screen 
+        name="Register" 
+        component={Register} 
+        options={{ title: 'Register' }}
+      />
+      <Stack.Screen 
+       name="Lesson" 
+       component={Lesson} 
+       options={{ title: 'Lesson'}}
+      />
+      <Stack.Screen
+      name ="LessonDetail"
+      component={ LessonDetail}
+      options={{title: 'LessonDetail'}}
+      />
+    </Stack.Navigator>
+  );
+}
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+    <NavStack />
+  </NavigationContainer>
   );
 }
 
