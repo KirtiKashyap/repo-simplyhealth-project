@@ -9,14 +9,13 @@ render(){
     console.log(tubeId)
     let tubeUrl="https://www.youtube.com/embed/"+tubeId;
 return(
-   <View>
-   <Text>{tubeId}</Text>
+   
 <WebView
 style={{margigeTop: 20}}
 javaScriptEnabled={true}
 source={{uri: tubeUrl}}
 />
-</View>)
+)
 
 }
    

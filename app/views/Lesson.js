@@ -1,5 +1,5 @@
 import React from "react";
-import {Text, View, FlatList, Image, TouchableWithoutFeedback,TouchableOpacity} from 'react-native'
+import {Text, View, FlatList, Image,TouchableOpacity} from 'react-native'
 
 export class Lesson extends React.Component{
     
@@ -94,4 +94,5 @@ render(){
     );
 }
 }
+
 
