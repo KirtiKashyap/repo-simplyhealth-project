@@ -11,7 +11,6 @@ export class MyLogin extends React.Component{
             dialogVisible: false
           };
     }
-
     showDialog = () => {
       this.setState({ dialogVisible: true });
     };
@@ -45,7 +44,7 @@ export class MyLogin extends React.Component{
           }
       });
       }
-      
+ 
     }
     render(){
         return (

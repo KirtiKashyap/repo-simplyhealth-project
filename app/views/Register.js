@@ -47,7 +47,6 @@ registerAccount=()=>{
     }
 }
 
-
     render(){
         return(
           <View style={styles.container}>

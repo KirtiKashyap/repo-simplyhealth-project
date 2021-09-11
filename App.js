@@ -7,15 +7,6 @@ import { Register} from './app/views/Register.js';
 import { Lesson } from './app/views/Lesson.js';
 import { LessonDetail } from './app/views/LessonDetail.js';
 
-// const yourStackNavigator = createStackNavigator({
-//   SomeRoute: SomeScreen,
-//   SpecificRoute: {
-//     screen: SpecificScreen,
-//     navigationOptions: ({ navigation }) => ({
-//         headerLeft: (<HeaderBackButton onPress={_ => navigation.navigate("Somewhere")}/>)
-//     })
-//   },
-// });
 const Stack = createStackNavigator();
 
 function NavStack() {

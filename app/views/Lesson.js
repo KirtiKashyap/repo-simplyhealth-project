@@ -14,7 +14,7 @@ export class Lesson extends React.Component{
     }
     async getLessionList(){
         try {
-            const response = await fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=pluralsight&type=video&key=AIzaSyC0HnMmQAranaCvvxP0dFteStxv458x3Pc');
+            const response = await fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=pluralsight&type=video&key=AIzaSyDfAI7a3oOuVvWOVwSsARnZ_Pbj23ixq4g');
             const responseJson = await response.json();
             this.setState({
                 listLoaded: true,
@@ -37,7 +37,6 @@ render(){
     const data = this.props.route.params.email;
     console.log(data)
     return(
-  
         <View>
             {
                 this.state.listLoaded &&
@@ -90,7 +89,7 @@ render(){
     </View>
     )
 }
-        </View>
+   </View>
     );
 }
 }

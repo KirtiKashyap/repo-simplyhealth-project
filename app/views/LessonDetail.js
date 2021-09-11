@@ -8,15 +8,13 @@ render(){
    const tubeId = this.props.route.params.tubeId;
     console.log(tubeId)
     let tubeUrl="https://www.youtube.com/embed/"+tubeId;
-return(
-   
+return(   
 <WebView
 style={{margigeTop: 20}}
 javaScriptEnabled={true}
 source={{uri: tubeUrl}}
 />
 )
-
 }
    
 }
